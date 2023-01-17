@@ -1,8 +1,8 @@
 import express from "express";
+import indexRoutes from "./routes/index";
 
 const app = express();
 const PORT: number = 3000;
-import indexRoutes from "./routes/index";
 
 // middlewares
 app.use(express.json());
