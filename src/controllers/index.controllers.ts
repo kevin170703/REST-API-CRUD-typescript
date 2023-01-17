@@ -44,7 +44,11 @@ export const crateUser = async (
 //   res: Response
 // ): Promise<Response> => {};
 
-// export const delateUser = async (
-//   req: Request,
-//   res: Response
-// ): Promise<Response> => {};
+export const delateUser = async (
+  req: Request,
+  res: Response
+): Promise<Response> => {
+  const { id } = req.params;
+  await pool.query("DELETE FROM users WHERE id = $1", [id]);
+  return res.json(`Usuario con el id ${id} eliminado correactamente`);
+};
