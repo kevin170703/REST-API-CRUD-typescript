@@ -11,5 +11,5 @@ app.use(express.urlencoded({ extended: false }));
 app.use(indexRoutes);
 
 app.listen(PORT, () => {
-  console.log(`server en el puesto ${PORT}`);
+  console.log(`Servidor iniciado en el puerto ${PORT}`);
 });
